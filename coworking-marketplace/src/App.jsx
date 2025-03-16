@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { Home, Book, LogIn, Shield, Clock } from 'lucide-react';
+import HomePage from './pages/HomePage';
+import BookingPage from './pages/BookingPage';
+import LoginPage from './pages/LoginPage';
+import AdminDashboard from './components/AdminDashboard';
+import BookingHistory from './pages/BookingHistory';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 className=''>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <nav className="bg-blue-600 p-4 shadow-md">
+        <ul className="flex space-x-6 text-white max-w-6xl mx-auto">
+          <li className="flex items-center">
+            <Home className="mr-1" size={20} />
+            <Link to="/">Home</Link>
+          </li>
+          <li className="flex items-center">
+            <Book className="mr-1" size={20} />
+            <Link to="/book">Book</Link>
+          </li>
+          <li className="flex items-center">
+            <LogIn className="mr-1" size={20} />
+            <Link to="/login">Login</Link>
+          </li>
+          <li className="flex items-center">
+            <Shield className="mr-1" size={20} />
+            <Link to="/admin">Admin</Link>
+          </li>
+          <li className="flex items-center">
+            <Clock className="mr-1" size={20} />
+            <Link to="/history">History</Link>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/book" element={<BookingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/history" element={<BookingHistory />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
