@@ -32,10 +32,11 @@ coworking-app/
 │   └── server.js        # Entry point for backend
 ├── coworking-marketplace/
 │   ├── src/
+|   |   ├── utils/       #utility functions (api calls ) 
 │   │   ├── components/  # Reusable UI components (SpaceCard, FilterBar, etc.)
 │   │   ├── pages/       # Main pages (Home, Booking, AdminDashboard)
 │   │   ├── App.js       # App routing and layout
-│   │   └── index.js     # Frontend entry point
+│   │   └── index.html     # Frontend entry point
 ├── .env                 # Environment variables
 └── README.md            # Project documentation
 ```
