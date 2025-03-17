@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth');
 const spaceRoutes = require('./routes/spaces');
 const bookingRoutes = require('./routes/bookings');
+const cors = require('cors');
 require('dotenv').config(); // Load environment variables from .env file
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
