@@ -1,4 +1,3 @@
-// server/routes/spaces.js
 const express = require('express');
 const router = express.Router();
 const Space = require('../models/Space');
