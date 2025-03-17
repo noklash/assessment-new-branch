@@ -7,9 +7,9 @@ const BookingPage = () => {
   const location = useLocation();
   const spaceId = new URLSearchParams(location.search).get('spaceId');
   const [space, setSpace] = useState(null);
-  const [bookingData, setBookingData] = useState({ date: '', duration: 1 });
-  const [loading, setLoading] = useState(true); // Added loading state
-  const [error, setError] = useState(null); // Added error state
+  const [bookingData, setBookingData] = useState({ bookingDate: '', duration: 1 }); // Changed 'date' to 'bookingDate'
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (spaceId) fetchSpace();
@@ -22,7 +22,7 @@ const BookingPage = () => {
       const response = await getSpaces({ _id: spaceId });
       const spaces = Array.isArray(response) ? response : [];
       if (spaces.length > 0) {
-        setSpace(spaces[0]); // Use first space if available
+        setSpace(spaces[0]);
       } else {
         setError('Space not found');
       }
@@ -40,12 +40,13 @@ const BookingPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError(null); // Reset error before submission
     try {
-      await bookSpace({ spaceId, ...bookingData });
+      await bookSpace({ spaceId, ...bookingData }); // Now sends 'bookingDate'
       alert('Booking successful!');
     } catch (error) {
       console.error('Error booking space:', error);
-      alert(error.message || 'Booking failed.');
+      setError(error.message || 'Booking failed. Please try again.');
     }
   };
 
@@ -63,11 +64,11 @@ const BookingPage = () => {
             <p className="text-gray-600 mb-6">{space.location} - ${space.price}/hour</p>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Booking Date</label>
                 <input
                   type="date"
-                  name="date"
-                  value={bookingData.date}
+                  name="bookingDate" // Changed from 'date' to 'bookingDate'
+                  value={bookingData.bookingDate}
                   onChange={handleChange}
                   className="input-field"
                   required
