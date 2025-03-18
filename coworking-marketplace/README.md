@@ -1,6 +1,6 @@
 # Co-working Space Marketplace
 
-A simplified web application that allows users to browse, filter, and book co-working spaces, with an admin panel to manage listings and bookings. Built as a technical assessment to demonstrate skills in full-stack development.
+A simplified web application that allows users to browse, filter, and book co-working spaces, with an admin panel to manage listings and bookings.
 
 ## Features
 - **User Features:**
@@ -50,7 +50,7 @@ coworking-app/
 1. **Clone the Repository**
    ```bash
    git clone <repository-url>
-   cd coworking-app
+   cd coworking-marketplace 
    ```
 
 2. **Install Backend Dependencies**
