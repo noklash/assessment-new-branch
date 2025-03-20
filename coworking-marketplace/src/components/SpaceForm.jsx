@@ -1,4 +1,3 @@
-// src/components/SpaceForm.jsx
 import React, { useState } from 'react';
 import { createSpace, updateSpace } from '../utils/api';
 

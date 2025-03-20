@@ -1,4 +1,3 @@
-// src/components/RegisterForm.jsx
 import React, { useState } from 'react';
 import { UserPlus } from 'lucide-react';
 import { register } from '../utils/api';

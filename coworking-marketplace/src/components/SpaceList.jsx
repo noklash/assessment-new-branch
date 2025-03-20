@@ -1,4 +1,3 @@
-// src/components/SpaceList.jsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MapPin, DollarSign, Filter, Search } from 'lucide-react'; // Added Search icon
