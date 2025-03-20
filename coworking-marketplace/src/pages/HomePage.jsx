@@ -13,7 +13,7 @@ const HomePage = () => {
       <header className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-12 md:py-20 text-center overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold flex items-center justify-center gap-3 animate-fade-in">
-            <Home className="w-8 h-8 md:w-10 md:h-10" /> Find Your Perfect Co-working Space
+            Find Your Perfect Co-working Space
           </h1>
           <p className="mt-4 text-base sm:text-lg md:text-xl max-w-2xl mx-auto opacity-90 animate-slide-up">
             Discover and book co-working spaces tailored to your needs with ease.
@@ -38,12 +38,7 @@ const HomePage = () => {
         </div>
       </main>
 
-      {/* Footer (Optional Enhancement) */}
-      {/* <footer className="bg-gray-100 py-6 mt-12 text-center">
-        <p className="text-gray-600 text-sm md:text-base">
-          © 2025 Co-working Marketplace. All rights reserved.
-        </p>
-      </footer> */}
+      
     </div>
   );
 };
