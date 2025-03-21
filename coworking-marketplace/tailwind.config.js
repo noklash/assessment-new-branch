@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -15,11 +15,11 @@ export default {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
-    },
-  },
-  colors: {
-    blue: {
-      600: '#2563eb', 
+      colors: {
+        blue: {
+          600: '#2563eb', 
+        },
+      },
     },
   },
   plugins: [],

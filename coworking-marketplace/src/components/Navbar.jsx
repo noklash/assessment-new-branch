@@ -19,7 +19,7 @@ const Navbar = ({ token, setToken }) => {
 
   return (
     <nav className="bg-gradient-to-r from-blue-700 to-indigo-700 sticky top-0 z-50 shadow-xl ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-5">
         {/* Top Bar */}
         <div className="flex justify-between items-center">
           {/* Logo */}

@@ -1,11 +1,10 @@
-// src/pages/HomePage.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // For CTA navigation
 import SpaceList from '../components/SpaceList';
 import { Home, Search } from 'lucide-react'; // Added Search icon
 
 const HomePage = () => {
-  const navigate = useNavigate(); // For navigating to booking page
+  const navigate = useNavigate(); 
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -20,7 +19,7 @@ const HomePage = () => {
           </p>
           <button
             onClick={() => navigate('/book')}
-            className="mt-6 inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1"
+            className="mt-6 inline-flex items-center px-6 py-3 bg-white text-red-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1"
             aria-label="Explore Spaces Now"
           >
             <Search className="mr-2 w-5 h-5" /> Explore Spaces Now

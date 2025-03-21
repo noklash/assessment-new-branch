@@ -12,7 +12,7 @@ const BookingPage = () => {
   const [allSpaces, setAllSpaces] = useState([]);
   const [bookingData, setBookingData] = useState({
     bookingDate: '',
-    duration: 1,
+    duration: null,
   });
   const [status, setStatus] = useState({
     loading: true,
